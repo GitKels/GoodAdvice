@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var answerLabel: UILabel!
+    var answerArray = ["FUCK YEAH", "NOT SO SURE ABOUT THAT", "SURE, GO FOR IT", "ARE YOU FUCK'N KIDDING ME", "FUCK'EM ALL. I LOVE YOU", "YOUR DOING GREAT", "JUST BE YOURSELF", "GO FULL FUCK'N SAVAGE", "WHAT DO YOU CARE WHAT OTHER PEOPLE THINK", "YOU SHOULD GIVE 0 FUCKS", "KILL YOURSELF", "BUT ARE YOU DEAD?", "WOW, FIRST WORLD PROBLEMS", "YOU GOT THIS", "WHAT ARE YOU A MAMA'S BOY", "UH..NOT SO MUCH", "YOU DO YOU, BOO BOO", "THAT'S HOW I ROLL"]
     
+    var answerSelect = 0
     
 
     override func viewDidLoad() {
@@ -36,6 +38,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func goodAdviceBtn(sender: AnyObject) {
+    }
+    
+    func randomAnswerSelect () {
+        answerSelect = Int(arc4random_uniform(UInt32(answerArray.count)))
+        
+        
+    }
+    
+    func printAnswer () {
+        answerLabel.text = "\(answerArray[answerSelect])"
     }
     
 
