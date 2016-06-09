@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var askMeTextFeild: UITextField!
+    
+    
+    
+    
+    @IBOutlet weak var answerLabel: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +30,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    
+    
+    
+    @IBAction func goodAdviceBtn(sender: AnyObject) {
+    }
+    
 
 }
 
